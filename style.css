@@ -67,7 +67,7 @@ nav .nav-secondary li a {
   background-image: url(./assets/main-bg.jpg);
   background-size: cover;
   background-position: center bottom;
-  border: 1px solid red;
+  /* border: 1px solid red; */
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -119,7 +119,7 @@ nav .nav-secondary li a {
   height: 800px;
   background-image: url(./assets/the-games-bg.jpg);
   background-size: cover;
-  border: 1px solid red;
+  /* border: 1px solid red; */
   display: grid;
   grid-template-columns: 1fr 2.5fr;
   place-content: center;
@@ -203,7 +203,7 @@ nav .nav-secondary li a {
   height: 800px;
   background-image: url(./assets/features.jpg);
   background-size: cover;
-  border: 1px solid red;
+  /* border: 1px solid red; */
   display: grid;
   grid-template-columns: 1fr 1fr;
 }
@@ -253,20 +253,20 @@ nav .nav-secondary li a {
   color: white;
   display: grid;
   grid-template-areas:
-    "top top"
-    "left right";
+    "systop systop"
+    "sysleft sysright";
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 5fr;
 }
 
 .syst-req-top {
-  grid-area: top;
+  grid-area: systop;
   margin: auto;
   letter-spacing: 2px;
 }
 
 .syst-req-left {
-  grid-area: left;
+  grid-area: sysleft;
   /* border: 1px solid red; */
   padding: 100px 10px 100px 100px;
 }
@@ -293,7 +293,7 @@ td {
 }
 
 .syst-req-right {
-  grid-area: right;
+  grid-area: sysright;
   /* border: 1px solid red; */
 }
 
@@ -303,7 +303,7 @@ td {
   height: 800px;
   background-image: url(./assets/black-paper.jpg);
   background-size: cover;
-  border: 1px solid red;
+  /* border: 1px solid red; */
   display: grid;
   grid-template-columns: 1fr 1fr;
   color: white;
@@ -329,87 +329,217 @@ td {
   border-radius: 5px;
   font-weight: bold;
   margin-top: 20px;
+  cursor: pointer;
 }
 
 .press-qoutes-right {
-  padding: 50px;
-  border: 1px solid red;
-  display: grid;
-  grid-gap: 20px;
+  padding: 100px;
+  /* border: 1px solid red; */
+  display: flex;
+  flex-direction: column;
 }
 
 .press-qoutes-right .card {
   width: 500px;
+  height: 180px;
   background-color: #353434;
   border-radius: 10px;
   padding: 20px;
+  margin-top: 10px;
   box-sizing: border-box;
   display: grid;
   grid-template-areas:
-    "left right twitter"
-    "bottom bottom bottom";
-  grid-template-columns: 1fr 3fr 0.5fr;
+    "qouleft qouright qoutwitter"
+    "qoubottom qoubottom qoubottom";
+  grid-template-columns: 1fr 4fr 0.5fr;
   grid-template-rows: 1fr;
   align-items: center;
 }
 
 .press-qoutes-right .card .card-left {
-  grid-area: left;
+  grid-area: qouleft;
 }
 
 .press-qoutes-right .card .card-left img {
-  width: 70px;
+  width: 50px;
   border-radius: 50%;
   box-shadow: #f3af34 5px 5px;
 }
 
 .press-qoutes-right .card .card-right {
-  grid-area: right;
+  grid-area: qouright;
 }
 
 .press-qoutes-right .card .card-right .name {
-  font-size: 28px;
+  font-size: 24px;
   color: #f3af34;
 }
 
 .press-qoutes-right .card .card-right .profession {
-  font-size: 24px;
+  font-size: 18px;
   color: #8d8b8b;
   margin-top: -5px;
 }
 
 .press-qoutes-right .card .card-twitter {
-  grid-area: twitter;
+  grid-area: qoutwitter;
   display: flex;
   justify-content: end;
 }
 
 .press-qoutes-right .card .card-twitter img {
-  width: 30px;
+  width: 24px;
   margin-top: -40px;
 }
 
 .press-qoutes-right .card .card-bottom {
-  grid-area: bottom;
-  margin-top: 25px;
+  grid-area: qoubottom;
+  margin-top: 10px;
 }
 
 .press-qoutes-right .card .card-bottom .date {
   color: #8d8b8b;
   font-size: 14px;
-  margin-top: 25px;
+  margin-top: 5px;
 }
 
 .card-center {
-  margin: auto;
+  margin-left: 200px;
 }
 
 /* subscribe */
 .subcribe {
   width: 100%;
-  height: 800px;
   background-image: url(./assets/the-games-bg.jpg);
   background-size: cover;
-  border: 1px solid red;
+  /* border: 1px solid red; */
+  color: white;
+  display: grid;
+  grid-template-areas:
+    "subleft subright"
+    "subbottom subbottom"
+    "footer footer";
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 4fr 0.5fr;
+  padding: 100px;
+  box-sizing: border-box;
 }
+
+.subcribe .subcribe-left {
+  grid-area: subleft;
+  margin: auto;
+  /* border: 1px solid red; */
+}
+
+.subcribe .subcribe-right {
+  grid-area: subright;
+  /* border: 1px solid red; */
+  margin: auto;
+}
+
+.subcribe .subcribe-right h1 {
+  text-transform: uppercase;
+  font-size: 64px;
+  letter-spacing: 5px;
+  font-weight: 100;
+}
+
+.subcribe .subcribe-right .subcribe-form {
+  display: flex;
+  margin-top: 20px;
+}
+
+.subcribe .subcribe-right .subcribe-label {
+  width: 250px;
+  height: 60px;
+  background-color: #353434;
+  border-radius: 10px;
+  margin-right: 10px;
+  color: #8d8b8b;
+  padding: 10px;
+  border: none;
+  box-sizing: border-box;
+  display: block;
+}
+
+.subcribe .subcribe-right .subcribe-label p {
+  font-size: 12px;
+}
+
+.subcribe .subcribe-right .subcribe-label input {
+  background-color: #353434;
+  border: none;
+  width: 200px;
+  height: 20px;
+  color: #f3af34;
+}
+
+input::placeholder {
+  color: #f3af34;
+  font-size: large;
+}
+
+.subcribe .subcribe-right .subcribe-form button {
+  background-color: #f3af34;
+  color: black;
+  width: 200px;
+  height: 60px;
+  border-radius: 10px;
+  font-weight: bold;
+  border: none;
+}
+
+.subcribe .subcribe-bottom {
+  grid-area: subbottom;
+  /* border: 1px solid red; */
+}
+
+.subcribe .subcribe-bottom ul {
+  display: flex;
+  justify-content: flex-end;
+  list-style: none;
+}
+
+.subcribe .subcribe-bottom ul li {
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: 1px;
+  font-size: 12px;
+  margin-top: 50px;
+  margin-left: 50px;
+}
+
 /* footer */
+.subcribe footer {
+  grid-area: footer;
+  display: flex;
+  justify-content: space-between;
+  border-top: 1px solid #8d8b8b;
+  padding-top: 20px;
+  margin-top: 20px;
+}
+
+.subcribe footer .footer-left {
+  font-size: 12px;
+  color: #8d8b8b;
+}
+
+.subcribe footer .footer-right ul {
+  display: flex;
+  list-style: none;
+}
+
+.subcribe footer .footer-right ul li {
+  font-size: 12px;
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: bold;
+  margin-left: 25px;
+}
+
+.subcribe footer .footer-right ul li:nth-child(2) {
+  border-left: 2px solid white;
+  border-right: 2px solid white;
+  padding: 0 25px 0 25px;
+}
